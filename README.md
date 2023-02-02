@@ -1,14 +1,16 @@
 ## API를 이용한 뉴스 뷰어
 
-### React
+리액트를 다루는 기술> 을 참고하여 공부하면서 정리해본 내용입니다.<br>
+어려운 부분은 검색을 통해 해결했습니다.
 
----
+## api = newsapi제공
 
 #### NewsItem.js
 
 뉴스항목 컴포넌트<br>
 api로 가져온 데이터 props로 title, description, url, urlToImage 를 가져와<br>
 각 태그에 넣어줍니다.
+가져온props를 구조분해해를 이용하여 할당해준다.
 
     const NewsItem = ({ article }) => {
       const { title, description, url, urlToImage } = article;
@@ -75,6 +77,10 @@ useState를 활용해 데이터를 가져오는중엔 loading=false,true로 변�
       </NewsListBlock>
     );
     };
+
+axios.get함수를 사용하여 주소로 get요청을 보냅니다.
+후에 articles에 데이터를 담아준다.
+마지막 if문으로 값이 없으면 null을 한다.
 
 ---
 
